@@ -5,12 +5,11 @@
 
 <head>
     {% block meta %}
-    <!--First tag below allows support of older Internet Explorer versions and eliminate validation errors when validating HTML.-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     {% endblock %}
-    <!-- Extra meta -->
+    <!--Extra meta -->
     {% block extra_meta %} {% endblock %}
 
     <!-- Bootstrap CSS -->
@@ -24,6 +23,7 @@
     {% endblock %}
     <!-- Extra css -->
     {% block extra_css %} {% endblock %}
+
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     {% block corejs %}
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -41,7 +41,7 @@
     <!-- Extra js-->
     {% block extra_js %} {% endblock %}
 
-    <title>Boutique Erica {% block extra_title %}{% endblock %}</title>
+    <title>Boutique Erika {% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -50,7 +50,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">
-                        <strong>Boutique</strong>Erica
+                        <strong>Boutique</strong>Erika
                     </h2>
                 </a>
             </div>
@@ -81,7 +81,6 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                            <!---->
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
